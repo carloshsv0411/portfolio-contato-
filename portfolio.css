@@ -1,0 +1,135 @@
+:root{
+    --primary:rgba(79, 184, 246, 255);
+    --secondary: rgba(30, 103, 220, 255);
+    --glass:rgba(255, 255, 255, 0.7) ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3 )50%, 
+    rgba(0, 0, 0, 0.3 )50%, 
+    url(bg17.jpg));
+    background-image:url(bg17.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family:'Segoe UI', sans-serif;
+}
+
+.card
+{
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    color: white; /* Cor do texto */
+    align-items: center;
+    text-align: center;
+    transform-style: preserve-3d;
+    animation: float 5s ease-in-out infinite;
+}
+
+.content
+{
+    position: relative;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.avatar
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.avatar:hover
+{
+    transform: scale(1.1) rotate(15deg);
+}
+
+h1
+{
+    color: aliceblue;
+    font-size: 6.75mm;
+    margin-bottom: 10px;
+    font-style:italic;
+}
+
+p
+{
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.sociais
+{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.sociais a
+{
+    width: 40px;
+    height: 40px;
+    background: var(--glass);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: rgb(29, 31, 32);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sociais a:hover
+{
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    transform: translate(-5px);
+}
+
+button
+{   
+    padding: 12px 30px;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    letter-spacing: 2px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes float{
+    0%, 100% {transform: translateY(0) rotateX(0)  rotateY(0) ;}
+    25% {transform: translateY(-20px) rotateX(5deg) rotateY(5deg);}
+    75% {}
+}
